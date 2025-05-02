@@ -7,23 +7,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Place Your Order</h1>
+    <h1>Food Distributor E-Commerce</h1>
+    
+    <!-- Product Display Section -->
+    <div class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/150?text=Beef+Tripe" alt="Beef Tripe">
+            <h3>Beef Tripe</h3>
+            <p>$7.00</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/150?text=CTC+Cereal" alt="CTC Cereal">
+            <h3>CTC Cereal</h3>
+            <p>$6.59</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/150?text=18+Count+Eggs" alt="18 Count Eggs">
+            <h3>18 Count Eggs</h3>
+            <p>$49.99</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/150?text=Soylent+Green" alt="Soylent Green">
+            <h3>Soylent Green</h3>
+            <p>$5.00</p>
+        </div>
+    </div>
+
+    <!-- Order Form -->
+    <h2>Place Your Order</h2>
     <form id="order-form">
-        <label for="product">Product:</label>
-        <select id="product" name="product" required>
-            <option value="apple">Apple ($1.00)</option>
-            <option value="banana">Banana ($0.50)</option>
-            <option value="orange">Orange ($0.75)</option>
+        <label for="customer-id">Customer ID:</label>
+        <input type="text" id="customer-id" name="customer-id" required><br><br>
+
+        <label for="item">Item:</label>
+        <select id="item" name="item" required>
+            <option value="beef-tripe">Beef Tripe ($7.00)</option>
+            <option value="ctc-cereal">CTC Cereal ($6.59)</option>
+            <option value="18-count-eggs">18 Count Eggs ($49.99)</option>
+            <option value="soylent-green">Soylent Green ($5.00)</option>
         </select><br><br>
 
         <label for="quantity">Quantity:</label>
         <input type="number" id="quantity" name="quantity" min="1" required><br><br>
 
-        <label>Logistics:</label>
-        <input type="radio" id="delivery" name="logistics" value="delivery" required>
-        <label for="delivery">Delivery</label>
-        <input type="radio" id="pickup" name="logistics" value="pickup">
-        <label for="pickup">Pick-up</label><br><br>
+        <label for="delivery-instructions">Delivery Instructions:</label><br>
+        <textarea id="delivery-instructions" name="delivery-instructions" rows="4" cols="30"></textarea><br><br>
+
+        <label for="delivery-slot">Delivery Slot:</label>
+        <select id="delivery-slot" name="delivery-slot" required>
+            <option value="morning">Morning (8 AM - 12 PM)</option>
+            <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+            <option value="evening">Evening (4 PM - 8 PM)</option>
+        </select><br><br>
 
         <button type="submit">Submit Order</button>
     </form>
