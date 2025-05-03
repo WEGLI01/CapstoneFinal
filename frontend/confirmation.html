@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .confirmation-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #28a745;
+        }
+        .order-details {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .order-details p {
+            margin: 5px 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <h1>Order Received!</h1>
+        <p>Thank you for your order. Below are the details:</p>
+        <div class="order-details" id="order-details">
+            <p><strong>Order ID:</strong> <span id="order-id">Loading...</span></p>
+            <p><strong>Customer ID:</strong> <span id="customer-id">Loading...</span></p>
+            <p><strong>Item:</strong> <span id="item">Loading...</span></p>
+            <p><strong>Quantity:</strong> <span id="quantity">Loading...</span></p>
+            <p><strong>Delivery Slot:</strong> <span id="delivery-slot">Loading...</span></p>
+            <p><strong>Delivery Instructions:</strong> <span id="delivery-instructions">None</span></p>
+        </div>
+        <a href="/index.html" class="back-link">Back to Order Form</a>
+    </div>
+    <script>
+        // Parse URL query parameters
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('order-id').textContent = params.get('orderId') || 'N/A';
+        document.getElementById('customer-id').textContent = params.get('customerId') || 'N/A';
+        document.getElementById('item').textContent = params.get('item') || 'N/A';
+        document.getElementById('quantity').textContent = params.get('quantity') || 'N/A';
+        document.getElementById('delivery-slot').textContent = params.get('deliverySlot') || 'N/A';
+        document.getElementById('delivery-instructions').textContent = params.get('deliveryInstructions') || 'None';
+    </script>
+</body>
+</html>
