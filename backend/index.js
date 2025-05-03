@@ -30,14 +30,20 @@ exports.handler = async (event) => {
         // Return success response
         return {
             statusCode: 200,
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
             body: JSON.stringify({ message: 'Order submitted successfully', orderId })
         };
     } catch (error) {
         console.error('Error:', error);
         return {
             statusCode: 500,
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
             body: JSON.stringify({ message: 'Error submitting order', error: error.message })
         };
     }

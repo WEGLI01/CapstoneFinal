@@ -43,9 +43,9 @@ textarea {
 }
 button {
     padding: 10px;
-    background-color: #28a745;
+    background-color: #18652a;
     color: white;
-    border: none;
+    border: 2;
     cursor: pointer;
 }
 button:hover {
