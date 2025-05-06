@@ -1,0 +1,10 @@
+{
+    "erp": {
+        "inventoryStatus": "available",
+        "stockLevel": 100
+    },
+    "tms": {
+        "deliveryStatus": "confirmed",
+        "estimatedDelivery": "2025-05-03"
+    }
+}

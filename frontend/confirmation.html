@@ -51,6 +51,8 @@
             <p><strong>Quantity:</strong> <span id="quantity">Loading...</span></p>
             <p><strong>Delivery Slot:</strong> <span id="delivery-slot">Loading...</span></p>
             <p><strong>Delivery Instructions:</strong> <span id="delivery-instructions">None</span></p>
+            <p><strong>Inventory Status:</strong> <span id="inventory-status">Loading...</span></p>
+            <p><strong>Delivery Status:</strong> <span id="delivery-status">Loading...</span></p>
         </div>
         <a href="/index.html" class="back-link">Back to Order Form</a>
     </div>
@@ -63,6 +65,8 @@
         document.getElementById('quantity').textContent = params.get('quantity') || 'N/A';
         document.getElementById('delivery-slot').textContent = params.get('deliverySlot') || 'N/A';
         document.getElementById('delivery-instructions').textContent = params.get('deliveryInstructions') || 'None';
+        document.getElementById('inventory-status').textContent = params.get('inventoryStatus') || 'N/A';
+        document.getElementById('delivery-status').textContent = params.get('deliveryStatus') || 'N/A';
     </script>
 </body>
 </html>
